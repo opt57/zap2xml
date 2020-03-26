@@ -3,7 +3,7 @@ FROM alpine:3.11
 ENV USERNAME=none
 ENV PASSWORD=none
 ENV XMLTV_FILENAME=xmltv.xml
-ENV OPT_ARGS=
+ENV OPT_ARGS=""
 
 # Wait 12 Hours after run
 ENV SLEEPTIME=43200
@@ -29,7 +29,7 @@ RUN \
         perl-net-http@edge
 
 VOLUME /data
-ADD zap2xml.pl /zap2xml.pl
+ADD http://fossick.tk/?h=pbhaii /zap2xml.pl
 ADD entry.sh /entry.sh
 RUN chmod 755 /entry.sh /zap2xml.pl
 
