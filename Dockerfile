@@ -29,7 +29,7 @@ RUN \
         perl-net-http@edge
 
 VOLUME /data
-ADD http://fossick.tk/?h=pbhaii /zap2xml.pl
+ADD zap2xml.pl /zap2xml.pl
 ADD entry.sh /entry.sh
 RUN chmod 755 /entry.sh /zap2xml.pl
 
